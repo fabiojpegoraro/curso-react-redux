@@ -9,12 +9,16 @@ import Familia from "./components/basicos/Familia";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
 import TabelaProdutos from "./components/repeticao/TabelaProdutos";
+import ParOuImpar from "./components/condicional/ParOuImpar";
   
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => (
   <div className="App">
     <h1>Fumdametos React</h1>
     <div className='Cards'>
+    <Card titulo='#8 - Par ou Ímpar' color="#950">
+      <ParOuImpar numeros={[1, 4, 10, 20, 5, 7]}/>
+    </Card>
     <Card titulo='#7 - Tabela de Produtos' color="#900">
       <TabelaProdutos/>
     </Card>
