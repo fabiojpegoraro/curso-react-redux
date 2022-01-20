@@ -10,12 +10,20 @@ import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
 import TabelaProdutos from "./components/repeticao/TabelaProdutos";
 import ParOuImpar from "./components/condicional/ParOuImpar";
+import DiretaPai from "./components/comunicacao/DiretaPai";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
   
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => (
   <div className="App">
     <h1>Fumdametos React</h1>
     <div className='Cards'>
+    <Card titulo='#10 - Comunicação Indireta' color="#990">
+      <IndiretaPai/>
+    </Card>
+    <Card titulo='#9 - Comunicação Direta' color="#990">
+      <DiretaPai/>
+    </Card>
     <Card titulo='#8 - Par ou Ímpar' color="#950">
       <ParOuImpar numeros={[1, 4, 10, 20, 5, 7]}/>
     </Card>
