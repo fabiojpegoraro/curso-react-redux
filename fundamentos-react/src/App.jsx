@@ -12,12 +12,20 @@ import TabelaProdutos from "./components/repeticao/TabelaProdutos";
 import ParOuImpar from "./components/condicional/ParOuImpar";
 import DiretaPai from "./components/comunicacao/DiretaPai";
 import IndiretaPai from "./components/comunicacao/IndiretaPai";
+import Input from "./components/formulario/Input";
+import Contador from "./components/contador/Contador";
   
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => (
   <div className="App">
     <h1>Fumdametos React</h1>
     <div className='Cards'>
+    <Card titulo='#12 - Contador' color="#888">
+      <Contador numeroInicial={10}/>
+    </Card>
+    <Card titulo='#11 - Componente controlado' color="#088">
+      <Input/>
+    </Card>
     <Card titulo='#10 - Comunicação Indireta' color="#990">
       <IndiretaPai/>
     </Card>
