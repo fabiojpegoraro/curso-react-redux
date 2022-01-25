@@ -14,12 +14,16 @@ import DiretaPai from "./components/comunicacao/DiretaPai";
 import IndiretaPai from "./components/comunicacao/IndiretaPai";
 import Input from "./components/formulario/Input";
 import Contador from "./components/contador/Contador";
+import Mega from "./components/mega/Mega";
   
 // eslint-disable-next-line import/no-anonymous-default-export
 export default () => (
   <div className="App">
     <h1>Fumdametos React</h1>
     <div className='Cards'>
+    <Card titulo='#13 - Mega' color="#555">
+      <Mega/>
+    </Card>
     <Card titulo='#12 - Contador' color="#888">
       <Contador numeroInicial={10}/>
     </Card>
