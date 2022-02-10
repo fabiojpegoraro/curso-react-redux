@@ -1,3 +1,5 @@
 const [x, setX] = useState(valorInicial);
 
 Componentes controlados não não alterados. O que pode ser alterado é o estado do componente e ele receber o valor do novo estado (conceito React).
+
+useEffet(() => {}, []) Recebe uma função e uma lista de dependências como parâmetros. Executa efeitos colaterais em estados.
