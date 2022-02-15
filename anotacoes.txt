@@ -3,3 +3,9 @@ const [x, setX] = useState(valorInicial);
 Componentes controlados não não alterados. O que pode ser alterado é o estado do componente e ele receber o valor do novo estado (conceito React).
 
 useEffet(() => {}, []) Recebe uma função e uma lista de dependências como parâmetros. Executa efeitos colaterais em estados.
+
+useRef() atribui uma referência de um componente, por exemplo, à uma const. Essa referência pode ser utilizada em outros pontos da aplicação.
+
+useMemo(() => {}, []) Retorna um valor memorizado se o array sofrer alguma alteração. Esse valor memorizado pode ser resultado da execução de uma função, por exemplo.
+
+useCallBack(() => {}, []) Vai retornar uma função (memorizada) cuja referência foi criada no momento da renderização do componente que tem esse hook. Assim a função pode ser reutilizada sem que o compoente precise ser novamente renderizado.
