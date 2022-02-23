@@ -9,3 +9,7 @@ useRef() atribui uma referência de um componente, por exemplo, à uma const. Es
 useMemo(() => {}, []) Retorna um valor memorizado se o array sofrer alguma alteração. Esse valor memorizado pode ser resultado da execução de uma função, por exemplo.
 
 useCallBack(() => {}, []) Vai retornar uma função (memorizada) cuja referência foi criada no momento da renderização do componente que tem esse hook. Assim a função pode ser reutilizada sem que o compoente precise ser novamente renderizado.
+
+useContext(objetoContexto) Permite usar um contexto criado em nível mais alto e disponiblizado através do Provider.
+
+useReducer(() => {}, state) Recebe uma função (dispatch) e um state. Ao fazer o dispatch, a função (dispatch) é executada. A função dispatch recebe um objeto que sempre recebe um type ({type: type}). O segundo parâmetro da função dispatch pode ser um payload.
