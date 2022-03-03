@@ -1,31 +1,9 @@
 import React, { useReducer } from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 
-const initialState = {
-    cart: [],
-    products: [],
-    user: null,
-    number: 0
-}
+import { initialState, reducer} from '../../store'
 
-function reducer(state, action){
-    switch(action.type){
-        case 'numberAdd2':
-            return {...state, number: state.number + 2};
-        case 'numberMult7':
-            return {...state, number: state.number * 7};
-        case 'numberDiv25':
-            return {...state, number: state.number / 25};
-        case 'numberParseInt':
-            return {...state, number: parseInt(state.number)};
-        case 'addValor':
-            return{...state, number: state.number + action.payload};
-        case 'login':
-            return {...state, user: {name: action.payload}};
-        default:
-            return state;
-    }
-}
+import * as actions from '../../store/actions'
 
 function retornaNome(){
     const nome = document.querySelector('#login');
@@ -48,6 +26,8 @@ const UseReducer = (props) => {
 
     const [state, dispatch] = useReducer(reducer, initialState);
 
+    console.log(reducer);
+
     return (
         <div className="UseReducer">
             <PageTitle
@@ -64,17 +44,17 @@ const UseReducer = (props) => {
                 <span className="text">{state.number}</span>
                 <div>
                     <button className="btn"
-                        onClick={() => {dispatch({type: 'login', payload: retornaNome()})}}>Login</button>
+                        onClick={() => actions.login(dispatch, retornaNome())}>Login</button>
                     <button className="btn"
-                        onClick={() => dispatch({type: 'numberAdd2'})}>+2</button>
+                        onClick={() => actions.numberAdd2(dispatch)}>+2</button>
                     <button className="btn"
-                        onClick={() => dispatch({type: 'numberMult7'})}>*7</button>
+                        onClick={() => actions.numberMult7(dispatch)}>*7</button>
                     <button className="btn"
-                        onClick={() => dispatch({type: 'numberDiv25'})}>/25</button>
+                        onClick={() => actions.numberDiv25(dispatch)}>/25</button>
                     <button className="btn"
-                        onClick={() => dispatch({type: 'numberParseInt'})}>Int</button>
+                        onClick={() => actions.numberParseInt(dispatch)}>Int</button>
                     <button className="btn"
-                        onClick={() => dispatch({type: 'addValor', payload: retornaValor()})}>Add Valor</button>
+                        onClick={() => actions.addValor(dispatch, retornaValor())}>Add Valor</button>
                 </div>
                 <div>
                     <label>Nome:</label>

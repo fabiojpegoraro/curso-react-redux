@@ -13,3 +13,6 @@ useCallBack(() => {}, []) Vai retornar uma função (memorizada) cuja referênci
 useContext(objetoContexto) Permite usar um contexto criado em nível mais alto e disponiblizado através do Provider.
 
 useReducer(() => {}, state) Recebe uma função (dispatch) e um state. Ao fazer o dispatch, a função (dispatch) é executada. A função dispatch recebe um objeto que sempre recebe um type ({type: type}). O segundo parâmetro da função dispatch pode ser um payload.
+store = conjunto de estados
+reducers = responsáveis por interagir com os estados da store (altera-los, retorná-los)
+actions = responsáveis por chamar os reducers e passar para eles o que é necessário para alterar os estados (payload de uma request, por exemplo)
