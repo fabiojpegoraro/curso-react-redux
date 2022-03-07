@@ -1,0 +1,17 @@
+GET http://localhost:3003/api/todos
+
+###
+POST http://localhost:3003/api/todos
+Content-Type: application/x-www-form-urlencoded
+
+description=Pagar conta via PIX
+
+###
+DELETE http://localhost:3003/api/todos/6226702729cbcd4694d5827c
+Content-Type: application/x-www-form-urlencoded
+
+###
+PUT http://localhost:3003/api/todos/62266f8829cbcd4694d58278
+Content-Type: application/x-www-form-urlencoded
+
+done=true
