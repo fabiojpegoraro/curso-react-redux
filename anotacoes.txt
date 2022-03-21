@@ -16,3 +16,7 @@ useReducer(() => {}, state) Recebe uma função (dispatch) e um state. Ao fazer 
 store = conjunto de estados
 reducers = responsáveis por interagir com os estados da store (altera-los, retorná-los)
 actions = responsáveis por chamar os reducers e passar para eles o que é necessário para alterar os estados (payload de uma request, por exemplo)
+
+##Inciar um projeto front
+- Instalar dependências
+- 
