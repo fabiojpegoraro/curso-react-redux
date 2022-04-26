@@ -20,3 +20,11 @@ actions = responsáveis por chamar os reducers e passar para eles o que é neces
 ##Inciar um projeto front
 - Instalar dependências
 - 
+
+reducers retorna os valores dos novos estados que são criados pelo createStore passando os reducers como parâmetro.
+
+o react-redux junta react com redux através do Provider
+
+o método connect conecta o estado com as propriedades do componente (export default connect(mapStateToProps)(Componente))
+
+o dispatch chama os reducers passando o objeto da action como parâmetro
