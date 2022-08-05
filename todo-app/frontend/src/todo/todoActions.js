@@ -17,9 +17,17 @@ export const search = () => {
 };
 
 export const add = (description) => {
-    const request = axios.post(URL, { description });
-    return [
-        { type: 'TODO_ADDED', payload: request },
-        search()
-    ]
+    return dispatch => {
+        axios.post(URL, { description })
+            // .then(resp => dispatch({ type: 'TODO_ADDED', payload: resp.data }))
+            .then(resp => dispatch(search()));
+    }
+}
+
+export const changeTask = (changeType, todo) => {
+    const type = changeType === 'DONE';
+    return dispatch => {
+        axios.put(`${URL}/${todo._id}`, {...todo, done: type })
+            .then(resp => dispatch(search()));
+    }
 }
