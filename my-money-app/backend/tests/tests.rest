@@ -1,0 +1,14 @@
+GET http://localhost:3003/api/billingCycles
+
+###
+POST http://localhost:3003/api/billingCycles
+Content-Type: application/x-www-form-urlencoded
+
+name: Janeiro17
+month: 1
+year: 2017
+credits[0][name]: Salario Empresa
+credits[0][value]: 6500
+credits[0][name]: Salario Professor
+credits[0][value]: 2700
+debts[0][name]: Telefone
