@@ -1,14 +1,50 @@
 GET http://localhost:3003/api/billingCycles
 
 ###
+GET http://localhost:3003/api/billingCycles?skip=1&limit=1
+
+###
+GET http://localhost:3003/api/billingCycles/count
+
+###
+GET http://localhost:3003/api/billingCycles/summary
+
+###
 POST http://localhost:3003/api/billingCycles
 Content-Type: application/x-www-form-urlencoded
 
-name: Janeiro17
-month: 1
-year: 2017
-credits[0][name]: Salario Empresa
-credits[0][value]: 6500
-credits[0][name]: Salario Professor
-credits[0][value]: 2700
-debts[0][name]: Telefone
+name=Fevereiro/17
+&month=2
+&year=2200
+&credits[0][name]=Salario Empresa
+&credits[0][value]=6500
+&credits[1][name]=Salario Professor
+&credits[1][value]=2700
+&debts[0][name]=Telefone
+&debts[0][value]=89.86
+&debts[0][status]=PAGO
+&debts[1][name]=Condominio
+&debts[1][value]=720
+&debts[1][status]=AGENDADO
+
+###
+PUT http://localhost:3003/api/billingCycles/62fb76aa65da7c0edf09ef3f
+Content-Type: application/x-www-form-urlencoded
+
+name=Fevereiro/17
+&month=22
+&year=2117
+&credits[0][name]=Salario Empresa
+&credits[0][value]=6500
+&credits[1][name]=Salario Professor
+&credits[1][value]=2700
+&debts[0][name]=Telefone
+&debts[0][value]=89.86
+&debts[0][status]=PAGO
+&debts[1][name]=Condominio
+&debts[1][value]=720
+&debts[1][status]=AGENDADO
+
+###
+DELETE http://localhost:3003/api/billingCycles/62fb75eef59e350a9f7ec120
+Content-Type: application/x-www-form-urlencoded
