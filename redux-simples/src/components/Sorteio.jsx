@@ -21,8 +21,8 @@ const Sorteio = props => {
 
 const mapStateToProps = state => {
     return {
-        min: state.numeros.min,
-        max: state.numeros.max
+        min: state.numerosMin.min,
+        max: state.numerosMax.max
     }
 }
 

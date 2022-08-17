@@ -1,11 +1,13 @@
 import { createStore, combineReducers } from 'redux';
-import {numerosReducer} from './reducers/numerosReducer'
+import { numerosReducerMin } from './reducers/numerosReducerMin';
+import { numerosReducerMax } from './reducers/numerosReducerMax';
 
 const reducers = combineReducers({
-    numeros: numerosReducer,
+    numerosMin: numerosReducerMin,
+    numerosMax: numerosReducerMax
 })
 
-function storeConfig () {
+function storeConfig() {
     return createStore(reducers);
 }
 
