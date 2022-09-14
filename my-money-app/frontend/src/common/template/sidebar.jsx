@@ -3,7 +3,7 @@ import Menu from './menu'
 
 export default props => (
     <aside className='main-sidebar'>
-        <section>
+        <section className='sidebar'>
             <Menu />
         </section>
     </aside>
