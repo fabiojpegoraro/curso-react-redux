@@ -5,11 +5,15 @@ import { connect } from 'react-redux';
 import LabelAndInput from "../common/form/labelAndInput";
 import { init } from './billingCycleActions';
 import ItemList from './itemList';
+import Summary from "./summary";
 
 class BillingCycleForm extends Component {
 
     render() {
         const { handleSubmit, readOnly, credits, debts } = this.props;
+
+        const totalCredits = credits.map(credit => Number(credit.value) || 0).reduce((valueInicial, valueFinal) => valueInicial + valueFinal);
+        const totalDebts = debts.map(debt => Number(debt.value) || 0).reduce((valueInicial, valueFinal) => valueInicial + valueFinal);
 
         return (
             <form role='form' onSubmit={handleSubmit}>
@@ -20,6 +24,7 @@ class BillingCycleForm extends Component {
                         label='Mês' cols='12 4' placeholder='Informe o mês' type='number'/>
                     <Field name='year' component={LabelAndInput} readOnly={readOnly}
                     label='Ano' cols='12 4' placeholder='Informe o ano' type='number'/>
+                    <Summary credit={totalCredits} debt={totalDebts} />
                     <ItemList cols='12 6' list={credits} readOnly={readOnly} field='credits' legend='Créditos'/>
                     <ItemList cols='12 6' list={debts} readOnly={readOnly} field='debts' legend='Débitos' showStatus={true}/>
                 </div>
