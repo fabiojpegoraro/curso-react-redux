@@ -2,6 +2,9 @@ import Navegador from "../components/Navegador";
 
 
 export default function Inicio() {
+
+    const codigo = 123;
+    const filial = 'sp-02';
     return (
         <div style={{
             display: 'flex',
@@ -13,6 +16,8 @@ export default function Inicio() {
             <Navegador destino='/estiloso' texto='Estiloso'/>
             <Navegador destino='/exemplo' texto='Exemplo' cor='#9400d3'/>
             <Navegador destino='/jsx' texto='JSX' cor='crimson'/>
+            <Navegador destino='/navegacao' texto='Navegação #01' cor='green' />
+            <Navegador destino={`/cliente/${filial}/${codigo}`} texto='Navegação #02' cor='cornflowerblue' />
         </div>
     )
 }
